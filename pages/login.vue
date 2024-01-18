@@ -1,7 +1,4 @@
 <script setup>
-
-
-
 const arrayData = [
     {
         id: 1,
@@ -21,6 +18,10 @@ const arrayData = [
     },
 
 ]
+
+definePageMeta({
+    middleware: ["customauth"]
+})
 
 
 </script>
