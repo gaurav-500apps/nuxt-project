@@ -7,28 +7,32 @@ const arrayData = [
         name: "name",
         placeholder: "Enter name",
         type: "text",
-        formName: "signup"
+        formName: "signup",
+        text:"Enter Name"
     },
     {
         id: 2,
         name: "email",
         placeholder: "Enter email",
         type: "text",
-        formName: "signup"
+        formName: "signup",
+        text: "Enter Email"
     },
     {
         id: 3,
         name: "number",
         placeholder: "Enter number",
         type: "number",
-        formName: "signup"
+        formName: "signup",
+        text:"Enter Number"
     },
     {
         id: 4,
         name: "password",
         placeholder: "Enter password",
         type: "password",
-        formName: "signup"
+        formName: "signup",
+        text:"Enter Password"
     },
 
 ]

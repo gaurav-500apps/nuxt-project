@@ -10,8 +10,8 @@ const {data: products} = await useFetch('https://fakestoreapi.com/products')
     <div class="text-center font-semibold mt-2 text-2xl">All Products</div>
     <div>
         <div class="grid grid-cols-4 gap-5">
-            <div v-for="p in products">
-                <ProductCard :product="p"/>
+            <div v-for="product in products">
+                <ProductCard :product="product"/>
             </div>
         </div>
     </div>

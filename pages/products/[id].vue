@@ -7,6 +7,8 @@
             <p class="text-gray-1000 text-5xl mb-2 md:mb-6">Price: ${{ product.price }}</p>
             <p class="text-gray-600 description ">{{ product.description }}</p>
             <!-- <p class="text-gray-500">ID: {{ product.id }}</p> -->
+            <button class="btn bg-teal-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full mt-5">Buy Now</button>
+            <button class="btn bg-teal-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full mt-5 ml-5">Add To Cart</button>
         </div>
     </div>
 </template>

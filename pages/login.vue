@@ -8,14 +8,16 @@ const arrayData = [
         name: "email",
         placeholder: "Enter email",
         type: "text",
-        formName: "login"
+        formName: "login",
+        text:"Enter Email"
     },
     {
         id: 2,
         name: "password",
         placeholder: "Enter password",
         type: "password",
-        formName: "login"   
+        formName: "login",
+        text:"Enter Password"   
     },
 
 ]
