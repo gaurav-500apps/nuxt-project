@@ -1,5 +1,10 @@
 <script setup>
 
+definePageMeta({
+    middleware: ["customauth"]
+})
+
+
 
 const arrayData = [
     {

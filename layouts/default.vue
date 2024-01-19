@@ -1,4 +1,19 @@
 <script setup>
+
+// import useMainStore from '../store/stores.js'
+let  authenticatedUser = useCookie("authenticatedUser");
+let status = authenticatedUser.value;
+console.log(status)
+if(status){
+    console.log('loggedin')
+}
+const handleLogOut = () => {
+    // set the store 
+    authenticatedUser.value = undefined;
+    console.log(authenticatedUser)
+    navigateTo("/login");
+}
+
 </script>
 
 <template>
@@ -8,9 +23,11 @@
                 <ul class="flex gap-4">
                     <li><NuxtLink to="/">Home</NuxtLink></li>
                     <li><NuxtLink to="/about">About</NuxtLink></li>
+                    <li><NuxtLink to="/plugins">Plugins</NuxtLink></li>
                     <li><NuxtLink to="/products" class="btn">Products</NuxtLink></li>
-                    <li><NuxtLink to="/login">Login</NuxtLink></li>
-                    <li><NuxtLink to="/signup">Signup</NuxtLink></li>
+                    <li v-if="!status"><NuxtLink to="/login" class="btn">login</NuxtLink></li>
+                    <li v-if="!status"><NuxtLink to="/signup">Signup</NuxtLink></li>
+                    <li @click="handleLogOut" v-if="status"><NuxtLink to="/">logout</NuxtLink></li>
                 </ul>
         </nav>
     </header>

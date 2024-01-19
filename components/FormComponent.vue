@@ -5,6 +5,8 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 const props = defineProps(["arrayData"]);
 const arrayData = props.arrayData;
+// import useMainStore from '../store/stores.js'
+// const mainStore = useMainStore();
 // console.log(arrayData)
 //console.log("hi");
 
@@ -55,6 +57,12 @@ const validateUser = () => {
 
   if (user) {
     console.log("user exist");
+    const authenticatedUser = useCookie("authenticatedUser");
+    // set the store 
+    // mainStore.authenticatedUser = user;
+    // set the cookie
+    authenticatedUser.value = user;
+    console.log(authenticatedUser)
     console.log(user);
     navigateTo("/products");
     alert("welcome to Nuxt Mart");

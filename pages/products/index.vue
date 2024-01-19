@@ -1,7 +1,11 @@
 <script setup>
 definePageMeta({
-    layout: 'products'
+    layout: 'products',
+    middleware: ["customauth"]
 })
+
+
+
 // fetching the products from fake store API
 const {data: products} = await useFetch('https://fakestoreapi.com/products')
 

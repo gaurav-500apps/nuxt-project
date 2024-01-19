@@ -1,9 +1,13 @@
+    <script setup>
+    const nuxtApp = useNuxtApp();
+    const today = nuxtApp.today;
+    // console.log(today)
+    </script>
 <template>
-    <h1 class="text-center">Home Page</h1>
+    <p class="text-center">Home Page</p>
+    <h3 class="text-end">{{ today }}</h3>
 </template>
 
-<script setup>
-</script>
 
-<style>
+<style scoped>
 </style>
