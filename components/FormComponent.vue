@@ -1,3 +1,5 @@
+<!-- COMPONENTS/fORMcOMPOMNENT -->
+
 <script setup>
 import { defineProps, ref } from "vue";
 import { useRouter } from "vue-router";
@@ -58,11 +60,11 @@ const validateUser = () => {
   if (user) {
     console.log("user exist");
     const authenticatedUser = useCookie("authenticatedUser");
-    // set the store 
+    // set the store
     // mainStore.authenticatedUser = user;
     // set the cookie
     authenticatedUser.value = user;
-    console.log(authenticatedUser)
+    console.log(authenticatedUser);
     console.log(user);
     navigateTo("/products");
     alert("welcome to Nuxt Mart");

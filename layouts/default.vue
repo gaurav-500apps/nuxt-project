@@ -19,12 +19,14 @@ const handleLogOut = () => {
 <template>
     <header class="shadow-sm bg-white">
         <nav class="container mx-auto p-4 flex justify-between">
-            <NuxtLink to="/" class="font-bold">Nuxt Mart</NuxtLink>
+            <NuxtLink to="/" class="font-bold">Bub Mart</NuxtLink>
                 <ul class="flex gap-4">
                     <li><NuxtLink to="/">Home</NuxtLink></li>
                     <li><NuxtLink to="/about">About</NuxtLink></li>
                     <li><NuxtLink to="/plugins">Plugins</NuxtLink></li>
                     <li><NuxtLink to="/products" class="btn">Products</NuxtLink></li>
+                    <li><NuxtLink to="/users">Users</NuxtLink></li>
+                    <li><NuxtLink to="/spamfilter">Regex/Spam</NuxtLink></li>
                     <li v-if="!status"><NuxtLink to="/login" class="btn">login</NuxtLink></li>
                     <li v-if="!status"><NuxtLink to="/signup">Signup</NuxtLink></li>
                     <li @click="handleLogOut" v-if="status"><NuxtLink to="/">logout</NuxtLink></li>
