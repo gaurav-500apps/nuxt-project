@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 const forumLatest = "https://forum-proxy.freecodecamp.rocks/latest";
 const forumTopicUrl = "https://forum.freecodecamp.org/t/";
 const forumCategoryUrl = "https://forum.freecodecamp.org/c/";
@@ -320,4 +320,4 @@ td {
     font-size: 1.1rem;
   }
 }
-</style>
+</style> -->
