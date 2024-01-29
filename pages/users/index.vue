@@ -37,6 +37,7 @@ getSurveyData("signup");
           </div>
         </div>
       </NuxtLink>
+      
     </div>
   </div>
 </template>

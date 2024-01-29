@@ -49,7 +49,7 @@ const nextPage = () => {
         <img
           :src="`${user.image}`"
           alt="unfound"
-          class="h-40 w-40 object-cover rounded-md mb-4"
+          class="h-40 w-40 object-cover rounded-l-full mb-4"
         />
         <p class="text-lg font-semibold mb-2">{{ user.author }}</p>
         <p class="text-gray-700 mb-4">

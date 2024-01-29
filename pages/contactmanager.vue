@@ -6,13 +6,13 @@ function ContactManager() {
     contacts: [
       { 
         id: 1, 
-        name: "Kalyan", 
-        email: "kalyan@gmail.com" 
+        name: "Gagan", 
+        email: "Gagan@gmail.com" 
       },
       { 
         id: 2, 
-        name: "Sudheer", 
-        email: "sudheer@gmail.com" 
+        name: "Hari", 
+        email: "Hari@gmail.com" 
       },
     ],
     newContact: { 

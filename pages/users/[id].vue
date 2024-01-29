@@ -40,27 +40,8 @@ onMounted(() => {
       </div>
     </div>
   </template>
-  
 
-<!-- <template>
-    <div class="max-w-lg mx-auto mt-8">
-      <div class="bg-white rounded-md shadow-md p-6">
-        <h1 class="text-2xl font-bold mb-4">User Detail</h1>
-  
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <p class="text-gray-500">Name:</p>
-            <p class="font-semibold">{{ data.name }}</p>
-          </div>
-          <div>
-            <p class="text-gray-500">Number:</p>
-            <p class="font-semibold">{{ data.number }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template> -->
 
 <style scoped>
-/* Your scoped styles go here */
+
 </style>
