@@ -29,6 +29,7 @@ const handleLogOut = () => {
                     <li><NuxtLink to="/spamfilter">Regex/closures</NuxtLink></li>
                     <li><NuxtLink to="/contactmanager">Contact Manager</NuxtLink></li>
                     <li><NuxtLink to="/fetch">Free code users</NuxtLink></li>
+                    <li><NuxtLink to="/oops">oops</NuxtLink></li>
                     <li v-if="!status"><NuxtLink to="/login" class="btn">login</NuxtLink></li>
                     <li v-if="!status"><NuxtLink to="/signup">Signup</NuxtLink></li>
                     <li @click="handleLogOut" v-if="status"><NuxtLink to="/">logout</NuxtLink></li>
