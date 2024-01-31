@@ -1,5 +1,5 @@
-    
 <script setup>
+
 const numbers = ref([0, 0, 0, 0]);
 const sortedArray = ref([]);
 
@@ -26,7 +26,7 @@ const sortWithSelection = () => {
 
 <template>
   <div class="container mx-auto p-4 max-w-lg mt-5">
-    <h1 class="text-2xl font-semibold mb-4">Sorting Example</h1>
+    <h1 class="text-2xl font-semibold mb-4">Sort Your Numbers</h1>
 
     <div class="flex flex-col mb-4">
       <div class="mb-2">
