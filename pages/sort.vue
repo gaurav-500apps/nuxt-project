@@ -19,7 +19,7 @@ const sortWithSelection = () => {
     }
     [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
   }
-
+  
   sortedArray.value = arr;
 };
 </script>
