@@ -1,10 +1,17 @@
 <script setup>
+definePageMeta({
+  middleware: ["customauth"],
+});
+
 const nuxtApp = useNuxtApp();
 const today = nuxtApp.today;
 // console.log(today)
 </script>
 <template>
-  <marquee><span class="mr-3">🇮🇳 </span>Shop Now and Embrace the Spirit of Freedom! FLAT 15% OFF<span class="ml-3">🇮🇳 </span></marquee>
+  <marquee
+    ><span class="mr-3">🇮🇳 </span>Shop Now and Embrace the Spirit of Freedom!
+    FLAT 15% OFF<span class="ml-3">🇮🇳 </span></marquee
+  >
   <h3 class="text-end mt-5">{{ today }}</h3>
   <p class="text-3xl font-bold text-center mb-10">Home Page</p>
   <div>

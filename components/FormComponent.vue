@@ -1,5 +1,3 @@
-<!-- COMPONENTS/fORMcOMPOMNENT -->
-
 <script setup>
 import { defineProps, ref } from "vue";
 import { useRouter } from "vue-router";
@@ -7,10 +5,6 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 const props = defineProps(["arrayData"]);
 const arrayData = props.arrayData;
-// import useMainStore from '../store/stores.js'
-// const mainStore = useMainStore();
-// console.log(arrayData)
-//console.log("hi");
 
 let inputValues = {};
 arrayData.forEach((input) => {
@@ -41,8 +35,6 @@ const handleFormSubmit = () => {
   localStorage.setItem(arrayData[0].formName, JSON.stringify(localData));
   alert("Signedup Succesfully");
   // console.log(submittedData);
-
-  // Redirect to the dashboard page
   router.push("/login");
 };
 const validateUser = () => {
@@ -60,17 +52,14 @@ const validateUser = () => {
   if (user) {
     console.log("user exist");
     const authenticatedUser = useCookie("authenticatedUser");
-    // set the store
-    // mainStore.authenticatedUser = user;
-    // set the cookie
     authenticatedUser.value = user;
     console.log(authenticatedUser);
     console.log(user);
     navigateTo("/products");
-    alert("welcome to Nuxt Mart");
+    alert("welcome to Bub Mart");
   } else {
-    console.log("user doesnot exist");
-    alert("user doesnot exist");
+    console.log("user does not exist");
+    alert("user does not exist");
   }
 };
 </script>

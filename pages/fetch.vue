@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  middleware: ["customauth"],
+});
+
 import { ref, onMounted, computed } from "vue";
 
 const data = ref([]);
@@ -22,7 +26,7 @@ const displayedUsers = computed(() => {
   const endIndex = startIndex + usersPerPage;
   return data.value.slice(startIndex, endIndex);
 });
- 
+
 const prevPage = () => {
   if (currentPage.value > 1) {
     currentPage.value--;

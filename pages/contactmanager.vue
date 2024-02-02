@@ -1,23 +1,27 @@
 <script setup>
+definePageMeta({
+  middleware: ["customauth"],
+});
+
 const contactManager = reactive(new ContactManager());
 
 function ContactManager() {
   return {
     contacts: [
-      { 
-        id: 1, 
-        name: "Gagan", 
-        email: "Gagan@gmail.com" 
+      {
+        id: 1,
+        name: "Gagan",
+        email: "Gagan@gmail.com",
       },
-      { 
-        id: 2, 
-        name: "Hari", 
-        email: "Hari@gmail.com" 
+      {
+        id: 2,
+        name: "Hari",
+        email: "Hari@gmail.com",
       },
     ],
-    newContact: { 
-        name: "", 
-        email: "" 
+    newContact: {
+      name: "",
+      email: "",
     },
 
     addContact() {

@@ -19,7 +19,6 @@ const arrayData = [
     type: "text",
     formName: "signup",
     text: "Enter Email",
-    
   },
   {
     id: 3,

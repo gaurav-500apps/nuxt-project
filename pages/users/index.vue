@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  middleware: ["customauth"],
+});
+
 // Define a reactive reference for surveyData
 let surveyData = ref([]);
 
@@ -37,7 +41,6 @@ getSurveyData("signup");
           </div>
         </div>
       </NuxtLink>
-      
     </div>
   </div>
 </template>

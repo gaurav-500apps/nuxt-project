@@ -1,13 +1,13 @@
 <script setup>
 definePageMeta({
-    layout: 'products',
-    middleware: ["customauth"]
-})
+  layout: "products",
+  middleware: ["customauth"],
+});
 
 // Used useFetch to fetch products
-const { data: products } = useFetch('https://fakestoreapi.com/products');
+const { data: products } = useFetch("https://fakestoreapi.com/products");
 // https://fakestoreapi.com/products/category/jewelery
-console.log( products);
+console.log(products);
 </script>
 
 <template>

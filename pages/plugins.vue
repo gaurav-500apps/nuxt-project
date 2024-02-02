@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  middleware: ["customauth"],
+});
+
 const { even } = useNuxtApp();
 </script>
 

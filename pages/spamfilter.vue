@@ -1,3 +1,35 @@
+<script setup>
+definePageMeta({
+  middleware: ["customauth"],
+});
+// import { ref } from 'vue';
+const spamWordsRegex =
+  /lottery|win|get rich quick|business proposal|prince|bank account|urgent|free/i;
+const inputEmail = ref("");
+const isSpam = ref(false);
+
+const checkSpam = () => {
+  isSpam.value = spamWordsRegex.test(inputEmail.value);
+};
+
+// closure code
+const counter = (() => {
+  const count = ref(0);
+
+  const increment = () => {
+    count.value++;
+  };
+
+  const getCounter = () => {
+    return count.value;
+  };
+
+  return {
+    increment,
+    getCounter,
+  };
+})();
+</script>
 <template>
   <div class="container mx-auto p-8 flex items-center justify-center mt-4">
     <h1 class="text-3xl font-bold mb-8">Spam Filter</h1>
@@ -42,35 +74,3 @@
     <p class="mt-4">Counter Value: {{ counter.getCounter() }}</p>
   </div>
 </template>
-
-<script setup>
-// import { ref } from 'vue';
-const spamWordsRegex =
-  /lottery|win|get rich quick|business proposal|prince|bank account|urgent|free/i;
-const inputEmail = ref("");
-const isSpam = ref(false);
-
-const checkSpam = () => {
-  isSpam.value = spamWordsRegex.test(inputEmail.value);
-};
-
-// closure code
-// import { ref } from "vue";
-
-const counter = (() => {
-  const count = ref(0);
-
-  const increment = () => {
-    count.value++;
-  };
-
-  const getCounter = () => {
-    return count.value;
-  };
-
-  return {
-    increment,
-    getCounter,
-  };
-})();
-</script>
