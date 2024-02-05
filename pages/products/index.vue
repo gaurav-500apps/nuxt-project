@@ -19,6 +19,7 @@ async function getData() {
     const res = await fetch(apiUrl);
     const resdata = await res.json();
     data.value = resdata;
+    console.log(data);
   } catch (error) {
     console.error(error);
   }
@@ -31,10 +32,13 @@ onMounted(() => {
 <template>
   <div>
     <div class="text-center font-semibold mt-4 text-2xl">All Products</div>
-
-    <!-- Search input and category dropdown -->
+    <!-- category dropdown  -->
     <div class="flex justify-end mt-6 space-x-4">
-      <select v-model="selectedCategory" @change="getData" class="border p-1">
+      <select
+        v-model="selectedCategory"
+        @change="getData"
+        class="border p-1 border-2 border-teal-900 rounded-md"
+      >
         <option value="">All Categories</option>
         <option
           v-for="category in categories"
@@ -45,7 +49,6 @@ onMounted(() => {
         </option>
       </select>
     </div>
-
     <!-- Products list -->
     <div class="grid grid-cols-4 gap-5">
       <div v-for="(product, index) in data" :key="index">
